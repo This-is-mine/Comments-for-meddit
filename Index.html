@@ -38,7 +38,8 @@
         fclose($old);
     }
     
-    #Read =fopen("comments.txt", "r+t");
+    #Read comments
+    $read = fopen("comments.txt", "r+t");
     echo "<br><br>Comments<hr>".fread($read, 1024);
     fclose($read);
 
