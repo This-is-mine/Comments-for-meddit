@@ -31,7 +31,7 @@
 
         #Delete everything, write down new and old comments
         $write = fopen("comments.txt", "w+");
-        $string = "<b>" .$Name. "</b><br>".$Comment."<br>\n".$old_comments;
+        $string ="<b>" .$Name. "</b><br>" .$Comment. "<br>\n".$old_comments;
         fwrite($write, $string);
         fclose($write);
         fclose($old);
