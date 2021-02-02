@@ -21,7 +21,7 @@
 <?php
 
     if($_POST['Submit']){
-        print "<h1> Your comment has been submitted!<h1>";
+        print "<h1>Your comment has been submitted!<h1>";
 
         $Name = $_POST['Name'];
         $Comment = $_POST['Comment'];
@@ -37,5 +37,12 @@
         fclose($write);
         fclose($old);
     }
+
+    #Read comments
+    $read = fopen("comments.txt", "r+t");
+    echo "<br><br>Comments<hr>".fread($read, 1024);
+    fclose($read);
+
+?>
     
     
